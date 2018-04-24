@@ -8,13 +8,13 @@
         public int Quantity { get; set; }
         public decimal LineValue { get; set; }
 
-        public PurchaseLine(int id, int transactionId, int productId, int quantity, decimal lineValue)
+        public PurchaseLine(int id, int transactionId, int productId, int quantity)
         {
             Id = id;
             TransactionId = transactionId;
             ProductId = productId;
             Quantity = quantity;
-            LineValue = lineValue;
+           //Calculate LineValue
         }
 
         public override bool Validate()
