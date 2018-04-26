@@ -65,56 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Customer.cs">
-      <DependentUpon>POSModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="POSModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POSModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="POSModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POSModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="POSModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POSModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>POSModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaseLine.cs">
-      <DependentUpon>POSModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Stock.cs">
-      <DependentUpon>POSModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction.cs">
-      <DependentUpon>POSModel.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="POS.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="POSModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>POSModel.Context.cs</LastGenOutput>
-      <DependentUpon>POSModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="POSModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSModel.edmx</DependentUpon>
-      <LastGenOutput>POSModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="POS_log.ldf">
-      <DependentUpon>POS.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -129,17 +80,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="POSModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>POSModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="POSModel.edmx.diagram">
-      <DependentUpon>POSModel.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
