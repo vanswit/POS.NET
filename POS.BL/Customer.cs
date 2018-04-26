@@ -11,16 +11,16 @@ namespace POS.BL
         public int Id { get; private set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
-        public int AddressId { get; set; }
+        public Address Address { get; set; }
         public string EmailAddress { get; set; }
         public string FullName { get; }
 
-        public Customer(int id, string lastName, string firstName, int addressId, string emailAddress)
+        public Customer(int id, string lastName, string firstName, Address address, string emailAddress)
         {
             Id = id;
             LastName = lastName;
             FirstName = firstName;
-            AddressId = addressId;
+            Address = address;
             EmailAddress = emailAddress;
             FullName = firstName + " " + lastName;
         }

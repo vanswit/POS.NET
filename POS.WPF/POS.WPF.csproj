@@ -101,5 +101,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POS.BL\POS.BL.csproj">
+      <Project>{fbd21af2-05ee-4ff0-b883-832ee12adf50}</Project>
+      <Name>POS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS.EF\POS.EF.csproj">
+      <Project>{2c023431-b065-4c5c-a3c5-77385064bbdc}</Project>
+      <Name>POS.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS.Repositories\POS.Repositories.csproj">
+      <Project>{325e1a2e-9f63-41b5-a5a4-413cc628e08b}</Project>
+      <Name>POS.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

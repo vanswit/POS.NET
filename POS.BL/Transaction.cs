@@ -10,16 +10,20 @@ namespace POS.BL
     {
         public int Id { get; private set; }
         public DateTime DateTime { get; set; }
-        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+        public List<PurchaseLine> PurchaseLines { get; set; }
         public decimal? Total { get; }
+        public Payment Payment { get; set; }
 
         private Transaction() { }
 
-        public Transaction(int id, DateTime dateTime, int customerId)
+        public Transaction(int id, DateTime dateTime, Customer customer, Payment payment, List<PurchaseLine> purchaseLines)
         {
             Id = id;
             DateTime = dateTime;
-            CustomerId = customerId;
+            Customer = customer;
+            PurchaseLines = purchaseLines;
+            Payment = payment;
             //Set total
         }
 

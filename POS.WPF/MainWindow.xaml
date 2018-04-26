@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Name="txtAmount" Height="23" Margin="88,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Name="txtPaymentType" Height="23" Margin="311,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="377,225,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <ListBox HorizontalAlignment="Left" Name="listPayments" Height="100" Margin="598,118,0,0" VerticalAlignment="Top" Width="100"/>
+
     </Grid>
 </Window>

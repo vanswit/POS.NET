@@ -14,6 +14,6 @@ namespace POS.EF
         public DbSet<Customer> Customers { get; set; }
         public DbSet<PurchaseLine> PurchaseLines { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-
+        public DbSet<Payment> Payments { get; set; }
     }
 }
