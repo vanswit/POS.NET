@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Repositories", "POS.Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.EF", "POS.EF\POS.EF.csproj", "{2C023431-B065-4C5C-A3C5-77385064BBDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.VIEWMODELS", "POS.VIEWMODELS\POS.VIEWMODELS.csproj", "{770FCE5A-1369-4A42-A4A4-AB14F55A9EDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2C023431-B065-4C5C-A3C5-77385064BBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C023431-B065-4C5C-A3C5-77385064BBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C023431-B065-4C5C-A3C5-77385064BBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770FCE5A-1369-4A42-A4A4-AB14F55A9EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770FCE5A-1369-4A42-A4A4-AB14F55A9EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770FCE5A-1369-4A42-A4A4-AB14F55A9EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770FCE5A-1369-4A42-A4A4-AB14F55A9EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

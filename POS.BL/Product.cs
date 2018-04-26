@@ -15,6 +15,11 @@ namespace POS.BL
         public string ProductCode { get; set;}
         public string FullProductName { get; }
 
+        public Product()
+        {
+
+        }
+
         public Product(int id, decimal price, string name, string vendor, string productCode)
         {
             Id = id;

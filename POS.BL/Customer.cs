@@ -15,6 +15,11 @@ namespace POS.BL
         public string EmailAddress { get; set; }
         public string FullName { get; }
 
+        public Customer()
+        {
+
+        }
+
         public Customer(int id, string lastName, string firstName, Address address, string emailAddress)
         {
             Id = id;

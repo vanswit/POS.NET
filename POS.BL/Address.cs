@@ -9,6 +9,11 @@
         public string City { get; set; }
         public string Country { get; set; }
 
+        public Address()
+        {
+
+        }
+
         public Address(int id, string addressLine1, string addressLine2, string postalCode, string city, string country)
         {
             Id = id;
@@ -21,7 +26,6 @@
 
         public override bool Validate()
         {
-            //Validate object
             return IsValid;
         }
     }

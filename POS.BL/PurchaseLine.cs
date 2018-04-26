@@ -3,16 +3,21 @@
     public class PurchaseLine : POSEntity
     {
         public int? Id { get; private set; }
-        public int ProductId { get; set; }
+        public Product Product { get; set; }
         public int Quantity { get; set; }
         public decimal LineValue { get; set; }
 
-        public PurchaseLine(int id, int productId, int quantity)
+        public PurchaseLine()
+        {
+
+        }
+
+        public PurchaseLine(int id, Product product, int quantity)
         {
             Id = id;
-            ProductId = productId;
+            Product = product;
             Quantity = quantity;
-           //Calculate LineValue
+            LineValue = Quantity * product.Price;
         }
 
         public override bool Validate()
