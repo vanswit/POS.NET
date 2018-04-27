@@ -40,8 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
+    <Compile Include="CustomerSearchViewModel.cs" />
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POS.BL\POS.BL.csproj">
+      <Project>{FBD21AF2-05EE-4FF0-B883-832EE12ADF50}</Project>
+      <Name>POS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS.Repositories\POS.Repositories.csproj">
+      <Project>{325E1A2E-9F63-41B5-A5A4-413CC628E08B}</Project>
+      <Name>POS.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

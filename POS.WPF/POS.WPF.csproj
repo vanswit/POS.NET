@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CustomerSearchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +72,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomerSearchWindow.xaml.cs">
+      <DependentUpon>CustomerSearchWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -113,6 +120,10 @@
     <ProjectReference Include="..\POS.Repositories\POS.Repositories.csproj">
       <Project>{325e1a2e-9f63-41b5-a5a4-413cc628e08b}</Project>
       <Name>POS.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS.VIEWMODELS\POS.VIEWMODELS.csproj">
+      <Project>{770FCE5A-1369-4A42-A4A4-AB14F55A9EDD}</Project>
+      <Name>POS.VIEWMODELS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

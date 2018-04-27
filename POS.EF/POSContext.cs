@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using POS.BL;
+using System.Collections;
+using System.Linq.Expressions;
 
 namespace POS.EF
 {
