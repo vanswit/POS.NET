@@ -17,7 +17,7 @@ namespace POS.BL
 
         public Customer()
         {
-
+            
         }
 
         public Customer(int id, string lastName, string firstName, Address address, string emailAddress)
@@ -27,7 +27,12 @@ namespace POS.BL
             FirstName = firstName;
             Address = address;
             EmailAddress = emailAddress;
-            FullName = firstName + " " + lastName;
+            FullName = FirstName + " " + LastName;
+        }
+
+        public override string ToString()
+        {
+            return Id + " " + FirstName + " " + LastName;
         }
 
         public override bool Validate()

@@ -2,6 +2,7 @@
 using POS.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,11 @@ namespace POS.VIEWMODELS
 {
     public class CustomerSearchViewModel : INotifyPropertyChanged
     {
-        private IEnumerable<Customer> customers;
+        private ObservableCollection<Customer> customers;
 
         public CustomerSearchViewModel()
         {
-
+            customers = new ObservableCollection<Customer>();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -27,10 +28,10 @@ namespace POS.VIEWMODELS
 
         public void SearchCustomers(Dictionary<string, string> parameters)
         {
-            Customers = CustomerRepository.GetCustomers(parameters);
+            Customers = new ObservableCollection<Customer>(CustomerRepository.GetCustomers(parameters).ToList());
         }
 
-        public IEnumerable<Customer> Customers
+        public ObservableCollection<Customer> Customers
         {
             get { return customers; }
             set

@@ -37,11 +37,17 @@ namespace POS.WPF
                 //db.SaveChanges();
                 //int id = p.Id;
 
-                var q = from p in db.Payments
-                        select p;
+                //var q = from p in db.Payments
+                //        select p;
 
-                listPayments.ItemsSource = q.ToList();
+                //listPayments.ItemsSource = q.ToList();
             }
+        }
+
+        private void bynCustomerSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var customerWindow = new CustomerSearchWindow();
+            customerWindow.Show();
         }
     }
 }

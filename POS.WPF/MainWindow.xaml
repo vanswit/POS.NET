@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Search customer" Name="bynCustomerSearch" HorizontalAlignment="Left" Margin="61,35,0,0" VerticalAlignment="Top" Width="103"/>
+        <Button Content="Search customer" Name="bynCustomerSearch" HorizontalAlignment="Left" Margin="61,35,0,0" VerticalAlignment="Top" Width="103" Click="bynCustomerSearch_Click"/>
     </Grid>
 </Window>

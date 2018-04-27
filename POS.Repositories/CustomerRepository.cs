@@ -14,29 +14,41 @@ namespace POS.Repositories
         {
             using (POSContext context = new POSContext())
             {
-                var customers = from c in context.Customers
+                var customerList = new List<Customer>();
+
+                var customers = from c in context.Customers          
                                 select c;
+
                 if (parameters["FirstName"] != null)
                 {
-                    customers = customers.Where(c => c.FirstName.Contains(parameters["FirstName"]));
+                    string firstName = parameters["FirstName"];
+                    customers = customers.Where(c => c.FirstName.Contains(firstName));
                 }
 
                 if (parameters["LastName"] != null)
                 {
-                    customers = customers.Where(c => c.LastName.Contains(parameters["LastName"]));
+                    string lastName = parameters["LastName"];
+                    customers = customers.Where(c => c.LastName.Contains(lastName));
                 }
 
                 if (parameters["City"] != null)
                 {
-                    customers = customers.Where(c => c.Address.City.Contains(parameters["City"]));
+                    string city = parameters["City"];
+                    customers = customers.Where(c => c.Address.City.Contains(city));
                 }
 
                 if (parameters["Email"] != null)
                 {
-                    customers = customers.Where(c => c.EmailAddress.Contains(parameters["Email"]));
+                    string emailAddress = parameters["Email"];
+                    customers = customers.Where(c => c.EmailAddress.Contains(emailAddress));
                 }
 
-                return customers;
+                foreach (var c in customers)
+                {
+                    customerList.Add(c);
+                }
+
+                return customerList;
             }
 
             

@@ -47,6 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201804261236442_InitialCreate.cs" />
+    <Compile Include="Migrations\201804261236442_InitialCreate.Designer.cs">
+      <DependentUpon>201804261236442_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804271235032_initial.cs" />
+    <Compile Include="Migrations\201804271235032_initial.Designer.cs">
+      <DependentUpon>201804271235032_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804271314166_initial1.cs" />
+    <Compile Include="Migrations\201804271314166_initial1.Designer.cs">
+      <DependentUpon>201804271314166_initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="POSContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +72,17 @@
       <Project>{FBD21AF2-05EE-4FF0-B883-832EE12ADF50}</Project>
       <Name>POS.BL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804261236442_InitialCreate.resx">
+      <DependentUpon>201804261236442_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804271235032_initial.resx">
+      <DependentUpon>201804271235032_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804271314166_initial1.resx">
+      <DependentUpon>201804271314166_initial1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -25,6 +25,7 @@ namespace POS.WPF
         public CustomerSearchWindow()
         {
             ViewModel = new CustomerSearchViewModel();
+            this.DataContext = ViewModel;
             InitializeComponent();
         }
 
@@ -34,25 +35,34 @@ namespace POS.WPF
 
             if (!string.IsNullOrEmpty(txtFirstName.Text))
             {
-
+                parameters.Add("FirstName", txtFirstName.Text);
             }
+            else parameters.Add("FirstName", null);
 
             if (!string.IsNullOrEmpty(txtLastName.Text))
             {
-
+                parameters.Add("LastName", txtLastName.Text);
             }
+            else parameters.Add("LastName", null);
+
 
             if (!string.IsNullOrEmpty(txtCity.Text))
             {
-
+                parameters.Add("City", txtCity.Text);
             }
+            else parameters.Add("City", null);
+
 
             if (!string.IsNullOrEmpty(txtEmailAddress.Text))
             {
-
+                parameters.Add("Email", txtEmailAddress.Text);
             }
+            else parameters.Add("Email", null);
 
-            ViewModel.SearchCustomers(null);
+
+            
+
+            ViewModel.SearchCustomers(parameters);
         }
     }
 }
